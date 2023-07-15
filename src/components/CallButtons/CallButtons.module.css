@@ -1,0 +1,37 @@
+.buttonContainer {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 2rem;
+}
+.buttonContainer button {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  border: none;
+}
+.buttonContainer button svg {
+  width: 25px;
+  height: 25px;
+}
+
+.disable {
+  background-color: red;
+  color: white;
+}
+.enable {
+  background-color: blueviolet;
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .buttonContainer {
+    bottom: 2%; 
+
+  }
+}

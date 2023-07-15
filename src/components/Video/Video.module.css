@@ -1,0 +1,77 @@
+.videoContainer {
+  position: relative;
+}
+.video {
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: rotateY(180deg);
+}
+.noVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  letter-spacing: 0.2rem;
+  font-size: 3rem;
+}
+.noAudio {
+  position: absolute;
+  right: 1rem;
+  top: 1.2rem;
+  color: red;
+  transform: scale(1.2);
+  z-index: 10;
+}
+.remotePlayer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.localPlayer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 200px;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* background-color: black; */
+}
+.title {
+  color: white;
+  padding: 1rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.3rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .localPlayer {
+    max-width: 90%;
+    right: none;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+  }
+  .remotePlayer {
+    position: absolute !important;
+    left: 50%;
+    top: 3%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 90%;
+    height: 400px;
+    object-fit: cover;
+  }
+}
